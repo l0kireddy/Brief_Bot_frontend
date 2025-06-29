@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 {
+  color: #2b6cb0;
+  margin-bottom: 30px;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #224e88;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loader {
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.output {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #111;
+}
+
+.dropzone {
+  border: 2px dashed #2b6cb0;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+  background-color: #f0f8ff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropzone:hover {
+  background-color: #e3efff;
+}
+
+.filename {
+  font-weight: bold;
+  margin-top: 10px;
+  color: green;
+}
+
+/* 🟦 Progress Bar Styles */
+.progress-bar-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.progress-bar {
+  height: 8px;
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #3182ce, #63b3ed);
+  background-size: 200% 100%;
+  animation: progressAnimation 2s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes progressAnimation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.loading-text {
+  font-size: 0.95rem;
+  margin-top: 8px;
+  color: #444;
+  font-style: italic;
+}
